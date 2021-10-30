@@ -30,5 +30,15 @@ namespace PRACTICA_MVC_4.Controllers
 
 
         }
+        public ActionResult ListadoVisitas()
+        {
+            LibroVisitas libro =new LibroVisitas();
+            string todo = libro.leer();
+            ViewData["Libro"] = todo;
+            return View();
+
+        }
+
+
     }
 }
